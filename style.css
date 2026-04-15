@@ -1,0 +1,27 @@
+root::after {
+    --baltic-blue: #22577aff;
+    --tropical-teal: #38a3a5ff;
+    --emerald: #57cc99ff;
+    --light-green: #80ed99ff;
+    --tea-green: #c7f9ccff;
+}
+
+body{}
+.container{}
+header{}
+header nav{}
+header nav a{}
+header nav a.aktiv{}
+aside.quiz{}
+aside.quiz h1{}
+aside.quiz p.question{}
+aside.quiz button{}
+main{}
+main img{}
+main h1{}
+main p{}
+aside.sources{}
+aside.sources h1{}
+aside.sources a{}
+footer{}
+footer a{}
