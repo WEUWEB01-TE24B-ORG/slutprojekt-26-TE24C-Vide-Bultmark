@@ -1,4 +1,4 @@
-root::after {
+:root {
     --baltic-blue: #22577aff;
     --tropical-teal: #38a3a5ff;
     --emerald: #57cc99ff;
@@ -6,22 +6,91 @@ root::after {
     --tea-green: #c7f9ccff;
 }
 
-body{}
-.container{}
-header{}
-header nav{}
-header nav a{}
+body{
+    background-color: #fff;
+}
+.container{
+    background-color: var(--baltic-blue);
+    width: 1000px;
+    margin: auto;
+    color: var(--tea-green);
+    padding: 30px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "quiz main sources"
+    "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    gap: 20px;
+}
+header{
+    grid-area: header;
+    background-color: var(--emerald);
+    border-radius: 20px;
+    padding: 20px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header nav a{
+    text-decoration: none;
+    background-color: var(--tropical-teal);
+    color: var(--light-green);
+    padding: 30px;
+    width: 100%;
+    margin: 0px 10px 0px 10px;
+    border-radius: 20px;
+}
 header nav a.aktiv{}
-aside.quiz{}
+aside.quiz{
+    grid-area: quiz;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--emerald);
+    border-radius: 20px;
+}
 aside.quiz h1{}
 aside.quiz p.question{}
-aside.quiz button{}
-main{}
-main img{}
-main h1{}
-main p{}
-aside.sources{}
+aside.quiz button{
+    width: 75%;
+
+}
+main{
+    grid-area: main;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    background-color: var(--emerald);
+    border-radius: 20px;
+    padding: 20px;
+}
+main .images{}
+main .images img{
+    width: 100%;
+    flex-direction: column;
+}
+main .content{
+    flex-direction: row;
+}
+main .content h1{}
+main .content p{
+    text-align: left;
+}
+aside.sources{
+    grid-area: sources;
+    background-color: var(--emerald);
+    border-radius: 20px;
+}
 aside.sources h1{}
 aside.sources a{}
-footer{}
-footer a{}
+footer{
+    grid-area: footer;
+    background-color: var(--emerald);
+    border-radius: 20px;
+}
+footer p{}
