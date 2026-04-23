@@ -43,8 +43,14 @@ header nav a{
     width: 100%;
     margin: 0px 10px 0px 10px;
     border-radius: 20px;
+    box-shadow: 3px 3px 5px black;
 }
-header nav a.aktiv{}
+header nav a.aktiv{
+    box-shadow: none;
+}
+header nav a:hover{
+    box-shadow: none;
+}
 aside.quiz{
     grid-area: quiz;
     display: flex;
@@ -52,12 +58,14 @@ aside.quiz{
     align-items: center;
     background-color: var(--emerald);
     border-radius: 20px;
+    justify-content: space-between;
+    padding: 20px;
+    
 }
 aside.quiz h1{}
 aside.quiz p.question{}
 aside.quiz button{
     width: 75%;
-
 }
 main{
     grid-area: main;
