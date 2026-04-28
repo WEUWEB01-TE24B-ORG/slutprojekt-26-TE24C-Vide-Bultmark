@@ -6,52 +6,67 @@
     --tea-green: #c7f9ccff;
 }
 
-body{
+body {
     background-color: #fff;
 }
-.container{
+
+/* dator, 1024px eller större */
+.container {
     background-color: var(--baltic-blue);
-    width: 1000px;
+    width: 400px;
     margin: auto;
     color: var(--tea-green);
     padding: 30px;
     border-radius: 20px;
     display: grid;
-    grid-template-areas: 
-    "header header header"
-    "quiz main sources"
-    "footer footer footer";
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "header"
+        "main"
+        "quiz"
+        "sources"
+        "footer";
     text-align: center;
     gap: 20px;
 }
-header{
+
+header {
     grid-area: header;
     background-color: var(--emerald);
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 5px;
 }
-header nav{
+
+header nav {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "firstRow"
+    "secondRow"; */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
-header nav a{
+
+header nav a {
     text-decoration: none;
     background-color: var(--tropical-teal);
     color: var(--light-green);
-    padding: 30px;
-    width: 100%;
-    margin: 0px 10px 0px 10px;
+    padding: 10px;
+    width: 50%;
+    margin: 0px 5px 10px 5px;
     border-radius: 20px;
     box-shadow: 3px 3px 5px black;
 }
-header nav a.aktiv{
+
+header nav a.aktiv {
     box-shadow: none;
 }
-header nav a:hover{
+
+header nav a:hover {
     box-shadow: none;
 }
-aside.quiz{
+
+aside.quiz {
     grid-area: quiz;
     display: flex;
     flex-direction: column;
@@ -60,14 +75,18 @@ aside.quiz{
     border-radius: 20px;
     justify-content: space-between;
     padding: 20px;
-    
 }
-aside.quiz h1{}
-aside.quiz p.question{}
-aside.quiz button{
+
+aside.quiz h1 {}
+
+aside.quiz p.question {}
+
+aside.quiz button {
     width: 75%;
+    margin-bottom: 10px;
 }
-main{
+
+main {
     grid-area: main;
     display: flex;
     display: grid;
@@ -77,28 +96,73 @@ main{
     border-radius: 20px;
     padding: 20px;
 }
-main .images{}
-main .images img{
+
+main .images {}
+
+main .images img {
     width: 100%;
     flex-direction: column;
 }
-main .content{
+
+main .content {
     flex-direction: row;
 }
-main .content h1{}
-main .content p{
+
+main .content h1 {}
+
+main .content p {
     text-align: left;
 }
-aside.sources{
+
+aside.sources {
     grid-area: sources;
     background-color: var(--emerald);
     border-radius: 20px;
 }
-aside.sources h1{}
-aside.sources a{}
-footer{
+
+aside.sources h1 {}
+
+aside.sources a {}
+
+footer {
     grid-area: footer;
     background-color: var(--emerald);
     border-radius: 20px;
 }
-footer p{}
+
+footer p {}
+
+
+
+
+/* surfplatta, från och med 768px till 1024px*/
+@media (min-width: 768px) {
+    .container {
+        width: 650px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "header header"
+            "quiz main"
+            "sources sources"
+            "footer footer";
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* dator, 1024px eller mer*/
+@media (min-width: 1024px) {
+    .container {
+        width: 900px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "header header header"
+            "quiz main sources"
+            "footer footer footer";
+    }
+}
