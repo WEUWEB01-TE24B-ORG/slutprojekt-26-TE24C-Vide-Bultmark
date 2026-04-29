@@ -97,11 +97,15 @@ main {
     padding: 20px;
 }
 
-main .images {}
+main .images {
+    margin: auto;
+    flex-direction: column;
+}
 
 main .images img {
     width: 100%;
-    flex-direction: column;
+    border: 5px var(--baltic-blue) solid;
+    border-radius: 10px;
 }
 
 main .content {
