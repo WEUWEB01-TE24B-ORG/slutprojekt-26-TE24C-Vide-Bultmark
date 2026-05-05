@@ -10,7 +10,7 @@ body {
     background-color: #fff;
 }
 
-/* dator, 1024px eller större */
+/* mobiler upp till 768px */
 .container {
     background-color: var(--baltic-blue);
     width: 400px;
@@ -37,11 +37,6 @@ header {
 }
 
 header nav {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "firstRow"
-    "secondRow"; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +121,10 @@ aside.sources {
 
 aside.sources h1 {}
 
-aside.sources a {}
+aside.sources a {
+    text-decoration: none;
+    color: var(--baltic-blue);
+}
 
 footer {
     grid-area: footer;
