@@ -1,3 +1,4 @@
+/* färgpaletten som används i hemsidan */
 :root {
     --baltic-blue: #22577aff;
     --tropical-teal: #38a3a5ff;
@@ -6,18 +7,27 @@
     --tea-green: #c7f9ccff;
 }
 
+/* hemsidans utseende */
 body {
+    /* bakrundsfärgen för hemsidan */
     background-color: #fff;
 }
 
 /* mobiler upp till 768px */
+/* kontainerns utseende */
 .container {
+    /* bestämmer sidans färg */
     background-color: var(--baltic-blue);
-    width: 400px;
-    margin: auto;
     color: var(--tea-green);
-    padding: 30px;
-    border-radius: 20px;
+    /* bestämmer sidans bred */
+    width: 400px;
+    /* centrerar hemsidan */
+    margin: auto;
+    /* skapar läsutrymme */
+    padding: 3em;
+    /* rundar hörn */
+    border-radius: 1em;
+    /* bestämmer sidans upplägg */
     display: grid;
     grid-template-areas:
         "header"
@@ -25,71 +35,106 @@ body {
         "quiz"
         "sources"
         "footer";
+    /* centrerar innehåll */
     text-align: center;
-    gap: 20px;
+    /* skapar utrymme mellan objekt i hemsidan */
+    gap: 2em;
 }
 
+/* sidhuvudets utseende */
 header {
+    /* bestämmer position i upplägget */
     grid-area: header;
+    /* bestämmer bakrundsfärg */
     background-color: var(--emerald);
-    border-radius: 10px;
-    padding: 5px;
+    /* rundar hörn */
+    border-radius: 0.5em;
+    /* skapar läsutrymme */
+    padding: 1em;
 }
 
+/* navigationsfältets utseende */
 header nav {
+    /* staplar länkarna på varandra */
     display: flex;
     flex-direction: column;
+    /* centrerar länkar */
     align-items: center;
 }
 
+/* länkarnas utseende */
 header nav a {
+    /* tar bort default dekoration */
     text-decoration: none;
+    /* färger */
     background-color: var(--tropical-teal);
     color: var(--light-green);
-    padding: 10px;
+    /* skapar läsutrymme */
+    padding: 1em;
+    /* begränsar bredd */
     width: 50%;
-    margin: 0px 5px 10px 5px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px black;
+    /* skapar utrymme mellan knappar */
+    margin: 0em 0.5em 1em 0.5em;
+    /* rundar hörn */
+    border-radius: 1em;
+    /* skapar 3d effekt */
+    box-shadow: 0.3em 0.3em 0.5em black;
 }
 
+/* den aktiva sidans knapps utseende */
 header nav a.aktiv {
+    /* tar bort 3d effekten */
     box-shadow: none;
 }
 
+/* utseende hos knappar med pekare över sig */
 header nav a:hover {
+    /* tar bort 3d effekten */
     box-shadow: none;
 }
 
+/* quixets utseende */
 aside.quiz {
+    /* bestämmer position i upplägget */
     grid-area: quiz;
+    /* staplar knapparna på varandra */
     display: flex;
     flex-direction: column;
+    /* centrerar innehållet */
     align-items: center;
+    /* färger */
     background-color: var(--emerald);
-    border-radius: 20px;
+    /* rundade hörn */
+    border-radius: 1em;
+    /*  */
     justify-content: space-between;
-    padding: 20px;
+    /* läsutrymme */
+    padding: 2em;
 }
 
-aside.quiz h1 {}
-
-aside.quiz p.question {}
-
+/* knapparnas utseende */
 aside.quiz button {
+    /* bestämmer bredd */
     width: 75%;
-    margin-bottom: 10px;
+    /* skapar utrymme mellan knappar */
+    margin-bottom: 1em;
 }
 
+/* innehållets utseende */
 main {
+    /* bestämmer position i upplägget */
     grid-area: main;
+    /* omorganiserar innehåll */
     display: flex;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 20px;
+    gap: 2em;
+    /* färg */
     background-color: var(--emerald);
-    border-radius: 20px;
-    padding: 20px;
+    /* rundar hörn */
+    border-radius: 1em;
+    /* skapar läsutrymme */
+    padding: 2em;
 }
 
 main .images {
@@ -99,8 +144,8 @@ main .images {
 
 main .images img {
     width: 100%;
-    border: 5px var(--baltic-blue) solid;
-    border-radius: 10px;
+    border: 0.5em var(--baltic-blue) solid;
+    border-radius: 0.5em;
 }
 
 main .content {
@@ -116,23 +161,20 @@ main .content p {
 aside.sources {
     grid-area: sources;
     background-color: var(--emerald);
-    border-radius: 20px;
+    border-radius: 1em;
 }
-
-aside.sources h1 {}
 
 aside.sources a {
     text-decoration: none;
     color: var(--baltic-blue);
+    margin-bottom: 10px;
 }
 
 footer {
     grid-area: footer;
     background-color: var(--emerald);
-    border-radius: 20px;
+    border-radius: 1em;
 }
-
-footer p {}
 
 
 
