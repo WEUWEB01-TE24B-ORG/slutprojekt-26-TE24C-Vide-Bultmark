@@ -26,7 +26,7 @@ function functionAltA() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right!  Try again!"
     }
 }
 
@@ -35,7 +35,7 @@ function functionAltB() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
 
@@ -44,7 +44,7 @@ function functionAltC() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
 
@@ -53,6 +53,6 @@ function functionAltD() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }

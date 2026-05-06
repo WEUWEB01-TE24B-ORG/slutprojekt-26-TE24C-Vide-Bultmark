@@ -4,7 +4,7 @@ randomNum = Math.floor(randomNum);
 // skapar en lista som är en logisk verision av alternativen
 const buttons = []
 // skapar en lista med felaktiga alternativ
-let wrongAlternatives = ["Romania", "59.368253N,17.997125E", "My Backyard", "The Toilet"]
+let wrongAlternatives = ["Romania", "59.368253N 17.997125E", "My Backyard", "The Toilet"]
 // 
 for (let index = 0; index < 4; index++) {
     if (index == randomNum) {
@@ -26,7 +26,7 @@ function functionAltA() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
 
@@ -35,7 +35,7 @@ function functionAltB() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
 
@@ -44,7 +44,7 @@ function functionAltC() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
 
@@ -53,6 +53,6 @@ function functionAltD() {
         document.querySelector("p.question").textContent = "Correct! You are amazing!"
     }
     else {
-        document.querySelector("p.question").textContent = "Wrong! Try again!"
+        document.querySelector("p.question").textContent = "That`s not right! Try again!"
     }
 }
